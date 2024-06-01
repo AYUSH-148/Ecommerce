@@ -1,0 +1,73 @@
+[
+    {
+      "name": "Elegant Chair",
+      "photo": "https://via.placeholder.com/150",
+      "price": 49.99,
+      "stock": 100,
+      "category": "Furniture"
+    },
+    {
+      "name": "Gaming Laptop",
+      "photo": "https://via.placeholder.com/150",
+      "price": 1299.99,
+      "stock": 50,
+      "category": "Electronics"
+    },
+    {
+      "name": "Wireless Mouse",
+      "photo": "https://via.placeholder.com/150",
+      "price": 19.99,
+      "stock": 200,
+      "category": "Accessories"
+    },
+    {
+      "name": "Yoga Mat",
+      "photo": "https://via.placeholder.com/150",
+      "price": 29.99,
+      "stock": 150,
+      "category": "Fitness"
+    },
+    {
+      "name": "Smart Watch",
+      "photo": "https://via.placeholder.com/150",
+      "price": 199.99,
+      "stock": 80,
+      "category": "Wearables"
+    },
+    {
+      "name": "Bluetooth Speaker",
+      "photo": "https://via.placeholder.com/150",
+      "price": 49.99,
+      "stock": 120,
+      "category": "Audio"
+    },
+    {
+      "name": "Running Shoes",
+      "photo": "https://via.placeholder.com/150",
+      "price": 89.99,
+      "stock": 90,
+      "category": "Footwear"
+    },
+    {
+      "name": "LED Desk Lamp",
+      "photo": "https://via.placeholder.com/150",
+      "price": 39.99,
+      "stock": 110,
+      "category": "Lighting"
+    },
+    {
+      "name": "Water Bottle",
+      "photo": "https://via.placeholder.com/150",
+      "price": 15.99,
+      "stock": 60,
+      "category": "Kitchen"
+    },
+    {
+      "name": "Noise Cancelling Headphones",
+      "photo": "https://via.placeholder.com/150",
+      "price": 149.99,
+      "stock": 50,
+      "category": "Audio"
+    }
+  ]
+  
