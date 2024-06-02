@@ -1,5 +1,9 @@
 import { FormEvent, useEffect, useState } from "react";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
+import axios from "axios";
+import { RootState, server } from "../../../redux/store";
+import toast from "react-hot-toast";
+import { useSelector } from "react-redux";
 
 const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 const allNumbers = "1234567890";
@@ -19,10 +23,9 @@ const Coupon = () => {
     await window.navigator.clipboard.writeText(coupon);
     setIsCopied(true);
   };
-
-  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
+  
+  const { user } = useSelector((state: RootState) => state.userReducer);
+  const AddingCharacters = ()=>{
     if (!includeNumbers && !includeCharacters && !includeSymbols)
       return alert("Please Select One At Least");
 
@@ -40,6 +43,35 @@ const Coupon = () => {
     }
 
     setCoupon(result);
+  }
+  const submitHandler = async(e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    AddingCharacters();
+    try {
+     
+        const { data } = await axios.post(
+          `${server}/api/v1/payment/coupon/new?id=${user?._id}`,
+          {
+            coupon,
+            amount: 3000,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if(data.success){
+          toast.success(`Coupon ${coupon} Created Successfully`)
+        }
+        
+    
+    }
+    catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
+   
   };
 
   useEffect(() => {

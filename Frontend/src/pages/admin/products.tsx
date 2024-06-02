@@ -53,12 +53,13 @@ const Products = () => {
     const err = error as CustomError;
     toast.error(err.data.message);
   }
-
+  
   useEffect(() => {
+
     if (data)
       setRows(
         data.products.map((i) => ({
-          photo: <img src={`${i.photo}`} />,
+          photo: <img src={i.photo.startsWith('uploads')?`${server}/${i.photo}`:`${i.photo}`} />,
           name: i.name,
           price: i.price,
           stock: i.stock,

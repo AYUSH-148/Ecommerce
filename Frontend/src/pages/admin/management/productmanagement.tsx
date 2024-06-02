@@ -105,7 +105,7 @@ const Productmanagement = () => {
           <>
             <section>
               <strong>ID - {data?.product._id}</strong>
-              <img src={`${photo}`} alt="Product" />
+              {!photo.startsWith('uploads')? <img src={`${photo}`} alt={name} />:<img src={`${server}/${photo}`} alt={name} />}
               <p>{name}</p>
               {stock > 0 ? (
                 <span className="green">{stock} Available</span>

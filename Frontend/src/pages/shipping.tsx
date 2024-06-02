@@ -40,13 +40,8 @@ const Shipping = () => {
         {
           amount: total,
         },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
       );
-
+       
       navigate("/pay", {
         state: data.clientSecret,
       });

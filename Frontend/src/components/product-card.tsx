@@ -21,7 +21,7 @@ const ProductCard = ({
 }: ProductsProps) => {
   return (
     <div className="product-card">
-      <img src={`${photo}`} alt={name} />
+      {!photo.startsWith('uploads')? <img src={`${photo}`} alt={name} />:<img src={`${server}/${photo}`} alt={name} />}
       <p>{name}</p>
       <span>₹{price}</span>
 
