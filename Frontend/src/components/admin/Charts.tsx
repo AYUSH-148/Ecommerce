@@ -56,10 +56,10 @@ export const BarChart = ({
     indexAxis: horizontal ? "y" : "x",
     plugins: {
       legend: {
-        display: false,
+        display: true,
       },
       title: {
-        display: false,
+        display: true,
       },
     },
 
@@ -128,6 +128,7 @@ export const DoughnutChart = ({
         backgroundColor,
         borderWidth: 0,
         offset,
+        
       },
     ],
   };
@@ -177,7 +178,7 @@ export const PieChart = ({
     responsive: true,
     plugins: {
       legend: {
-        display: false,
+        display: true,
       },
     },
   };
@@ -207,7 +208,7 @@ export const LineChart = ({
         display: false,
       },
       title: {
-        display: false,
+        display: true,
       },
     },
 
