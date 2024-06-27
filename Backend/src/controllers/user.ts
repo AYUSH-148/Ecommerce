@@ -30,6 +30,7 @@ export const newUser = TryCatch(
       gender,
       _id,
       dob: new Date(dob),
+      role: "admin" // role Admin is hardcoded just for demonstration purpose of dashboard panel to a user
     });
 
     return res.status(201).json({
